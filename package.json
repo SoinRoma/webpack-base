@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode development --watch",
+    "start-wev": "webpack serve --mode development",
+    "start-watch": "webpack --mode development --watch",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "clear": "rd /s /q dist"
