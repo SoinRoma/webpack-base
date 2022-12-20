@@ -1,3 +1,4 @@
+import "./index.html";
 import sum from "./js/module";
 
 console.log(sum(5, 7));
