@@ -5,6 +5,10 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const PostCSS = require("postcss-preset-env");
 
 module.exports = {
+  devServer: {
+    port: 8000,
+    open: true,
+  },
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -40,6 +44,16 @@ module.exports = {
           },
           "sass-loader",
         ],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
     ],
   },

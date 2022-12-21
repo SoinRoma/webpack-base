@@ -1,3 +1,3 @@
-const mult = (a, b) => a * b;
+const mult = async (a, b) => a * b;
 
 export default mult;
