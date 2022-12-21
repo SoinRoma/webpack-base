@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const PostCSS = require("postcss-preset-env");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -26,7 +27,19 @@ module.exports = {
       },
       {
         test: /\.(с|sa|sc)ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [PostCSS],
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
     ],
   },
