@@ -24,8 +24,7 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.html$/i,
         loader: "html-loader",
       },
@@ -44,6 +43,13 @@ module.exports = {
           },
           "sass-loader",
         ],
+      },
+      {
+        test: /\.woff$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext]"
+        }
       },
       {
         test: /\.m?js$/,
