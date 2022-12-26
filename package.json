@@ -1,5 +1,5 @@
 {
-  "name": "Webpack",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "Base configuration for Webpack",
   "main": "index.js",
