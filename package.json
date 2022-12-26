@@ -1,7 +1,7 @@
 {
-  "name": "Test",
+  "name": "Webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "Base configuration for Webpack",
   "main": "index.js",
   "scripts": {
     "start-web": "webpack serve --mode development",
@@ -11,7 +11,7 @@
     "clear": "rd /s /q dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Soin Roman",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.5",
